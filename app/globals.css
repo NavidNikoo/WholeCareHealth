@@ -1,0 +1,151 @@
+/* If you installed Bootstrap, keep this at the top */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* ===== Design Tokens ===== */
+:root {
+  /* Colors */
+  --bg: #fbfbfa;            /* warm white */
+  --surface: #ffffff;       /* cards / surfaces */
+  --text: #0f172a;          /* slate-900-ish */
+  --muted: #475569;         /* slate-600-ish */
+  --border: rgba(15, 23, 42, 0.12);
+
+  --primary: #0f4c3a;       /* deep evergreen */
+  --primary-600: #0c3f31;
+  --accent: #2bb673;        /* mint */
+  --accent-soft: rgba(43, 182, 115, 0.12);
+
+  /* Layout */
+  --container: 1120px;
+  --radius: 18px;
+
+  /* Shadows */
+  --shadow-sm: 0 6px 18px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 14px 40px rgba(15, 23, 42, 0.12);
+
+  /* Spacing scale */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 64px;
+}
+
+/* ===== Base ===== */
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+/* Typography standards */
+h1, h2, h3, h4, h5 {
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Max readable width for text blocks */
+.prose {
+  max-width: 68ch;
+}
+
+/* A “site container” that’s consistent across pages */
+.wc-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--s-5);
+  padding-right: var(--s-5);
+}
+
+@media (max-width: 576px) {
+  .wc-container {
+    padding-left: var(--s-4);
+    padding-right: var(--s-4);
+  }
+}
+
+/* Card pattern (works with Bootstrap too) */
+.wc-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.wc-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+/* Buttons */
+.btn-wc-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 600;
+}
+
+.btn-wc-primary:hover {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+  color: #fff;
+}
+
+.btn-wc-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 600;
+}
+
+.btn-wc-outline:hover {
+  background: rgba(15, 23, 42, 0.04);
+}
+
+main { min-height: 70vh; }
+
+/* --- Our Services card hover --- */
+
+.service-card {
+  transition:
+          transform 160ms ease,
+          box-shadow 160ms ease,
+          background-color 160ms ease;
+}
+
+.service-card:hover,
+.service-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+/* Icon polish */
+.service-card svg {
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.service-card:hover svg {
+  color: rgba(0, 0, 0, 0.9);
+  transform: scale(1.05);
+}
+
+
