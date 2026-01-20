@@ -1,41 +1,76 @@
-import Link from "next/link";
+import React from "react";
 
-export default function OurApproach() {
+type Item = {
+    title: string;
+    body: string;
+    meta?: string; // small supporting line
+};
+
+const items: Item[] = [
+    {
+        title: "Clarity",
+        body: "Straightforward communication so you understand your options and next steps.",
+        meta: "Clear plan after each visit"
+    },
+    {
+        title: "Collaboration",
+        body: "Visits are collaborative and unhurried, with time for questions and priorities.",
+        meta: "Your goals lead the plan"
+    },
+    {
+        title: "Evidence-based care",
+        body: "Care plans grounded in current best practices and tailored to your goals.",
+        meta: "Modern psychiatry, practical"
+    },
+    {
+        title: "Consistency",
+        body: "Follow-ups that track progress and adjust treatment thoughtfully over time.",
+        meta: "Steady support over time"
+    }
+];
+
+export default function HowWeCareForYou() {
     return (
-        <section className="mt-16 md:mt-24 py-20 md:py-24">
-            <div className="container mx-auto px-4">
-                <div className="mx-auto max-w-3xl text-center">
-                    <div className="mb-4 text-sm font-semibold tracking-wide text-emerald-800/90">
-
-                    </div>
-
-                    <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
-                        How We Care for You
-                    </h2>
-
-                    <div className="mx-auto mt-6 h-px w-16 bg-slate-200" />
-
-                    <div className="mx-auto mt-8 max-w-2xl text-base md:text-lg leading-relaxed text-slate-600">
-                        <p>
-                            We provide thoughtful, evidence-based psychiatric care tailored to your unique needs. Visits are collaborative and unhurried, with a focus on listening, understanding your goals, and building a plan that fits your life.
-                        </p>
-
-                        <p className="mt-6">
-                            Our approach emphasizes clarity, trust, and long-term support so you feel confident at
-                            every step of your care.
-                        </p>
-                    </div>
-
-                    <div className="mt-10">
-                        <Link
-                            href="/about"
-                            className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-800 hover:text-emerald-900 transition"
-                        >
-                            Learn more
-                            <span className="text-base">→</span>
-                        </Link>
-                    </div>
+        <section className="how-we-care py-5 py-lg-6">
+            <div className="container">
+                <div className="text-center mx-auto how-we-care__header">
+                    <p className="how-we-care__eyebrow mb-2">Our approach</p>
+                    <h2 className="how-we-care__title mb-3">How We Care for You</h2>
+                    <p className="how-we-care__subtitle mb-0">
+                        Thoughtful, evidence-based psychiatry tailored to your needs — with a focus on listening,
+                        understanding your goals, and building a plan that fits your life.
+                    </p>
                 </div>
+
+                <div className="row g-3 g-md-4 mt-4 mt-lg-5">
+                    {items.map((item, idx) => (
+                        <div className="col-12 col-md-6" key={item.title}>
+                            <div className="how-we-care__card h-100 p-4 p-lg-4">
+                                <div className="d-flex align-items-start gap-3">
+                                    <div className="how-we-care__chip" aria-hidden="true">
+                                        {String(idx + 1).padStart(2, "0")}
+                                    </div>
+
+                                    <div className="flex-grow-1">
+                                        <div className="d-flex flex-column">
+                                            <h3 className="how-we-care__cardTitle mb-1">{item.title}</h3>
+                                            {item.meta && (
+                                                <div className="how-we-care__meta mb-2">{item.meta}</div>
+                                            )}
+                                        </div>
+                                        <p className="how-we-care__cardBody mb-0">{item.body}</p>
+                                    </div>
+                                </div>
+
+                                <div className="how-we-care__accent" aria-hidden="true" />
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <p className="how-we-care__footnote text-center mt-4 mt-lg-5 mb-0">
+                    Adults 18+ • Telehealth across California • In-person in Orange County
+                </p>
             </div>
         </section>
     );

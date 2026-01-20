@@ -10,14 +10,16 @@ export default function AboutHero() {
                     backgroundPosition: "center",
                 }}
             >
-                {/* Single, strong overlay */}
+                {/* Overlay */}
                 <div
-                    className="position-absolute inset-0"
                     style={{
+                        position: "absolute",
+                        inset: 0,
                         background:
-                            "linear-gradient(90deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.6) 45%, rgba(15,23,42,0.25) 75%, rgba(15,23,42,0) 100%)",
+                            "linear-gradient(90deg, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.75) 45%, rgba(15,23,42,0.45) 70%, rgba(15,23,42,0.15) 100%)",
                     }}
                 />
+
 
                 {/* Content */}
                 <div
