@@ -1,15 +1,4 @@
-const PLANS = [
-    "Aetna",
-    "Anthem Blue Cross",
-    "Blue Shield of California",
-    "CalOptima",
-    "Cigna",
-    "UnitedHealthcare",
-    "Optum",
-    "Magellan",
-    "Medicare",
-    "Self-pay (out-of-network / cash pay)",
-];
+import InsuranceLogos from "./InsuranceLogos";
 
 export default function AcceptedInsurance() {
     return (
@@ -18,21 +7,28 @@ export default function AcceptedInsurance() {
                 <div className="col-lg-6">
                     <h2 className="h3 fw-semibold mb-2">Insurance we work with</h2>
                     <p className="text-muted">
-                        Common plans we frequently see. Networks can change — we’ll confirm eligibility for your specific plan.
+                        We work with many major plans. Networks can change — we’ll confirm
+                        eligibility for your specific plan.
                     </p>
 
-                    <div className="row g-3">
-                        {PLANS.map((p) => (
-                            <div key={p} className="col-12 col-md-6">
-                                <div className="p-3 rounded-4 border bg-white shadow-sm h-100">
-                                    <div className="fw-semibold">{p}</div>
-                                </div>
-                            </div>
-                        ))}
+                    {/* Reused logos (no duplicate heading) */}
+                    <InsuranceLogos hideHeading compact align="start" />
+
+                    {/* Self-pay / OON callout */}
+                    <div className="mt-4 p-4 rounded-4 border bg-white shadow-sm">
+                        <div className="fw-semibold mb-1">Self-pay &amp; out-of-network</div>
+                        <div className="text-muted">
+                            Prefer to pay directly or have out-of-network benefits? We’ll
+                            provide clear pricing and can offer a superbill upon request.
+                        </div>
                     </div>
 
                     <div className="text-muted small mt-3">
-                        Don’t see your plan? Contact us — we may still be able to help.
+                        Don’t see your plan?{" "}
+                        <a href="/contact" className="link-wc">
+                            Contact us
+                        </a>{" "}
+                        — we may still be able to help.
                     </div>
                 </div>
 
@@ -51,7 +47,7 @@ export default function AcceptedInsurance() {
                         </ul>
 
                         <div className="mt-4">
-                            <a className="btn btn-outline-secondary w-100" href="/contact">
+                            <a className="btn btn-wc btn-wc-outline w-100" href="/contact">
                                 Send insurance info
                             </a>
                         </div>

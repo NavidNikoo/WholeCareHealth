@@ -1,6 +1,4 @@
 // components/sections/InsuranceLogos.tsx
-// SHINE-inspired accepted insurance section (server-safe)
-
 import React from "react";
 
 const INSURANCES = [
@@ -16,25 +14,68 @@ const INSURANCES = [
     { name: "Optum", src: "/images/insurance/optum.png" },
 ];
 
-export default function InsuranceLogos() {
-    return (
-        <section className="py-5">
-            <div className="container text-center">
-                <h2 className="mb-3">Accepted Insurances</h2>
-                <p className="text-secondary mb-4">
-                    We work with many major insurance providers.
-                </p>
+type InsuranceLogosProps = {
+    hideHeading?: boolean;
+    compact?: boolean;
+    align?: "start" | "center";
+};
 
-                <div className="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4 align-items-center justify-content-center">
+export default function InsuranceLogos({
+                                           hideHeading = false,
+                                           compact = false,
+                                           align = "center",
+                                       }: InsuranceLogosProps) {
+    const textAlign = align === "start" ? "text-start" : "text-center";
+    const justify =
+        align === "start" ? "justify-content-start" : "justify-content-center";
+
+    // Tuned so wide logos (UHC/Optum/Medicare) never collide
+    const tileMin = compact ? 140 : 160; // min width of each logo tile
+    const tileMax = compact ? 180 : 210; // max width of each logo tile
+    const logoMaxH = compact ? 40 : 46;
+
+    return (
+        <section className={compact ? "" : "py-5"}>
+            {!hideHeading && (
+                <div className={`container ${textAlign}`}>
+                    <h2 className="mb-3">Accepted Insurances</h2>
+                    <p className="text-secondary mb-4">
+                        We work with many major insurance providers.
+                    </p>
+                </div>
+            )}
+
+            <div className={hideHeading ? "" : "container"}>
+                <div
+                    className={[
+                        "d-flex",
+                        "flex-wrap",
+                        justify,
+                        compact ? "gap-4" : "gap-5",
+                        "align-items-center",
+                    ].join(" ")}
+                >
                     {INSURANCES.map((i) => (
-                        <div className="col d-flex justify-content-center" key={i.name}>
+                        <div
+                            key={i.name}
+                            className="d-flex align-items-center justify-content-center"
+                            style={{
+                                minWidth: tileMin,
+                                maxWidth: tileMax,
+                                flex: `1 1 ${tileMin}px`,
+                            }}
+                        >
                             <img
                                 src={i.src}
                                 alt={i.name}
+                                loading="lazy"
+                                className="img-fluid"
                                 style={{
-                                    maxHeight: 42,
-                                    maxWidth: 140,
-                                    opacity: 0.85,
+                                    maxHeight: logoMaxH,
+                                    width: "auto",
+                                    maxWidth: "100%",
+                                    opacity: 0.9,
+                                    display: "block",
                                 }}
                             />
                         </div>

@@ -87,10 +87,10 @@ export default function Navbar() {
                     {/* Transparent logo (controlled size) */}
                     <span className="wc-logo" aria-hidden>
             <Image
-                src="/images/WCH-logo2.png"
+                src="/images/WCH-logo.png"
                 alt=""
-                width={48}
-                height={48}
+                width={64}
+                height={64}
                 priority
                 style={{ objectFit: "contain", display: "block" }}
             />
@@ -221,7 +221,7 @@ export default function Navbar() {
                                 <div className="d-flex align-items-center" style={{ gap: 10 }}>
                   <span className="wc-logo" aria-hidden style={{ width: 44, height: 44, borderRadius: 14 }}>
                     <Image
-                        src="/images/WCH-logo2.png"
+                        src="/images/WCH-logo.png"
                         alt=""
                         width={40}
                         height={40}

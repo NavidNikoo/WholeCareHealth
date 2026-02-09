@@ -1,4 +1,3 @@
-// components/sections/FinalCTA.tsx
 export default function FinalCTA() {
     return (
         <section className="container py-5">
@@ -14,9 +13,14 @@ export default function FinalCTA() {
 
                     <div className="col-lg-5">
                         <div className="d-grid gap-2 d-sm-flex justify-content-lg-end">
-                            <a className="btn btn-primary btn-lg" href="/new-patients">Request appointment</a>
-                            <a className="btn btn-outline-secondary btn-lg" href="/contact">Ask a question</a>
+                            <a href="/new-patients" className="btn btn-wc btn-wc-primary btn-wc-lg">
+                                Request appointment
+                            </a>
+                            <a href="/contact" className="btn btn-wc btn-wc-outline btn-wc-lg">
+                                Ask a question
+                            </a>
                         </div>
+
                         <div className="small text-muted mt-2 text-lg-end">
                             If this is an emergency, call 911 or go to your nearest ER.
                         </div>

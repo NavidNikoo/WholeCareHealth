@@ -8,8 +8,6 @@ export default function ContactPage() {
         <main>
             <ContactHero />
             <ContactGrid />
-            <FAQ />
-            <FinalCTA />
         </main>
     );
 }

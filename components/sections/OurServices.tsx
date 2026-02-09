@@ -76,8 +76,8 @@ function ServiceIcon({ name }: { name: IconName }) {
         viewBox: "0 0 24 24",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
-        style: { color: "rgba(0,0,0,0.75)" } as React.CSSProperties,
-    };
+        className: "service-icon", // ✅ CSS controls color + hover now
+    } as const;
 
     switch (name) {
         case "anxiety":
@@ -154,7 +154,12 @@ function ServiceIcon({ name }: { name: IconName }) {
                         stroke="currentColor"
                         strokeWidth="1.5"
                     />
-                    <path d="M7 16.5v1.2M19 16.5v1.2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    <path
+                        d="M7 16.5v1.2M19 16.5v1.2"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                    />
                     <path
                         d="M6.5 10.3c.8-2.7 3.2-4.6 6-4.6 1.2 0 2.3.3 3.3.9"
                         stroke="currentColor"
@@ -204,8 +209,18 @@ function ServiceIcon({ name }: { name: IconName }) {
                         strokeWidth="1.5"
                         strokeLinejoin="round"
                     />
-                    <path d="M9 7V6a3 3 0 0 1 6 0v1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                    <path d="M12 11v4M10 13h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    <path
+                        d="M9 7V6a3 3 0 0 1 6 0v1"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                    />
+                    <path
+                        d="M12 11v4M10 13h4"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                    />
                 </svg>
             );
 
@@ -247,7 +262,7 @@ export default function OurServices({
 
                     {showViewAll && (
                         <div className="col-12 col-lg-4 d-flex justify-content-lg-end">
-                            <a href="/services" className="btn btn-outline-dark">
+                            <a href="/services" className="btn btn-wc btn-wc-outline">
                                 View all services
                             </a>
                         </div>
@@ -263,8 +278,6 @@ export default function OurServices({
                                 style={{
                                     aspectRatio: "1 / 1",
                                     borderRadius: 18,
-                                    border: "1px solid rgba(0,0,0,0.08)",
-                                    boxShadow: "0 8px 24px rgba(0,0,0,0.06)",
                                 }}
                             >
                                 <div className="card-body d-flex flex-column justify-content-center align-items-center p-4 text-center">

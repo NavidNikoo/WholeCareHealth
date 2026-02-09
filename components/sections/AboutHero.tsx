@@ -45,10 +45,10 @@ export default function AboutHero() {
                     </p>
 
                     <div className="d-flex gap-3">
-                        <a className="btn btn-success btn-lg">
+                        <a href="/contact" className="btn btn-wc btn-wc-primary btn-lg">
                             Request appointment
                         </a>
-                        <a className="btn btn-outline-light btn-lg">
+                        <a href="/services" className="btn btn-wc btn-wc-outline-light btn-lg">
                             Explore services
                         </a>
                     </div>

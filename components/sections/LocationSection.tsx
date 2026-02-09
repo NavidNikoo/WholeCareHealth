@@ -27,14 +27,15 @@ export default function LocationSection() {
 
                         <div className="d-flex flex-wrap gap-2">
                             <a
-                                className="btn btn-dark"
+                                className="btn btn-wc btn-wc-outline"
                                 href={MAPS_LINK}
                                 target="_blank"
                                 rel="noreferrer"
                             >
                                 Get directions
                             </a>
-                            <a className="btn btn-outline-dark" href="/contact">
+
+                            <a className="btn btn-wc btn-wc-primary" href="/contact">
                                 Request an appointment
                             </a>
                         </div>
