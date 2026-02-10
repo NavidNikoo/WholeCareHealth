@@ -28,7 +28,7 @@ export default function NewPatientSteps() {
                         </div>
 
                         <div className="text-muted small mt-3">
-                            Prefer phone? Call <span className="fw-semibold">(714) 769-6090</span>.
+                            Prefer phone? Call <span className="fw-semibold">(949) 659-9967</span>.
                         </div>
                     </div>
 

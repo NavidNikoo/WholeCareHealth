@@ -69,7 +69,7 @@ export default function HowWeCareForYou() {
                 </div>
 
                 <p className="how-we-care__footnote text-center mt-4 mt-lg-5 mb-0">
-                    Adults 18+ • Telehealth across California • In-person in Orange County
+                    Telehealth across California • In-person in Orange County
                 </p>
             </div>
         </section>

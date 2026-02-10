@@ -11,7 +11,7 @@ export default function TeamPreview() {
         () => ({
             name: "Farhad Nikoo",
             creds: "DNP, PMHNP-BC, FNP",
-            role: "Psychiatric Nurse Practitioner • Adults 18+",
+            role: "Psychiatric Nurse Practitioner",
             paragraphs: [
                 "Dr. Farhad Nikoo is dual board-certified as a Psychiatric, Mental Health, and Family Nurse Practitioner. He earned his Doctorate of Nursing Practice and a post-doctorate degree in Psychiatric and Mental Health from Brandman University, affiliated with Chapman University. Additionally, he graduated as a Family Nurse Practitioner from the University of Detroit Mercy.",
                 "Dr. Nikoo has worked across emergency departments, intensive care units, family practices, psychiatric and mental health care, and addiction medicine. His experience spans both inpatient and outpatient settings, including addiction medicine, Crisis Stabilization Units, Intensive Outpatient Programs (IOP), and Partial Hospitalization Programs (PHP).",

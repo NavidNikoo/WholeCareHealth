@@ -11,7 +11,7 @@ export default function TopBar() {
             <div className="wc-container py-2 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2">
                 <div className="d-flex flex-wrap align-items-center gap-3" style={{ fontSize: 13 }}>
           <span style={{ color: "var(--text)", fontWeight: 600 }}>
-            Adults 18+ • Orange County
+
           </span>
                     <span style={{ color: "var(--muted)" }}>
             Telehealth &amp; In-person appointments

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
     const year = new Date().getFullYear();
@@ -10,26 +11,19 @@ export default function Footer() {
                     {/* Brand + contact */}
                     <div className="col-lg-5">
                         <div className="d-flex align-items-center gap-2 mb-2">
-                            <div
-                                aria-hidden
-                                style={{
-                                    width: 36,
-                                    height: 36,
-                                    borderRadius: 14,
-                                    background: "var(--accent-soft)",
-                                    display: "grid",
-                                    placeItems: "center",
-                                    color: "var(--primary)",
-                                    fontWeight: 900,
-                                }}
-                            >
-                                WC
-                            </div>
+                            <Image
+                                src="/images/WCH-logo.png"
+                                alt=""
+                                width={64}
+                                height={64}
+                                priority
+                                style={{ objectFit: "contain", display: "block" }}
+                            />
                             <div style={{ fontWeight: 900, fontSize: 18 }}>WholeCare Health</div>
                         </div>
 
                         <p className="mb-3" style={{ color: "var(--muted)", fontSize: 14, lineHeight: 1.6 }}>
-                            Modern, evidence informed psychiatric care for adults 18+ in Orange County, with telehealth
+                            Modern, evidence informed psychiatric care in Orange County, with telehealth
                             and in person appointments available.
                         </p>
 

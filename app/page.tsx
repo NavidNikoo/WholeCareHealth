@@ -13,7 +13,7 @@ export default function HomePage() {
         <main>
             <PageHero
                 title="Modern psychiatric care, grounded in evidence and empathy."
-                subtitle="Thoughtful, personalized psychiatry for adults 18+, with telehealth and in-person appointments across Orange County."
+                subtitle="Thoughtful, personalized psychiatry, with telehealth and in-person appointments across Orange County."
                 ctaLabel="Request an appointment"
                 ctaHref="/contact"
                 backgroundImage="/images/home-hero.jpg"

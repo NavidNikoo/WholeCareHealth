@@ -289,7 +289,7 @@ function ServiceIcon({ name }: { name: IconName }) {
 export default function OurServices({
                                         showViewAll = true,
                                         title = "Our Services",
-                                        subtitle = "A focused set of services for adults 18+, offering both telehealth and in-person care throughout Orange County.",
+                                        subtitle = "A focused set of services+, offering both telehealth and in-person care throughout Orange County.",
                                     }: {
     showViewAll?: boolean;
     title?: string;

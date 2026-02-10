@@ -22,7 +22,6 @@ export default function NewPatientsHero() {
                     </p>
 
                     <div className="d-flex flex-wrap gap-2 mb-4">
-                        <span className="badge rounded-pill text-bg-light border">Adults 18+</span>
                         <span className="badge rounded-pill text-bg-light border">
               Telehealth &amp; in-person
             </span>

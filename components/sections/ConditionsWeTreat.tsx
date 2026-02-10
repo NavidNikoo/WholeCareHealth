@@ -11,6 +11,7 @@ const GROUPS = [
             { label: "Depression & mood concerns", href: "/conditions/depression" },
             { label: "Spravato® (esketamine) treatment", href: "/services/spravato" },
             { label: "ADHD", href: "/conditions/adhd" },
+            { label: "Schizophrenia", href: "/conditions/schizophrenia" },
             { label: "Bipolar disorder", href: "/conditions/bipolar" },
             { label: "Sleep concerns", href: "/conditions/sleep" },
         ],
@@ -184,6 +185,21 @@ const CONDITION_CONTENT: Record<
         ],
         ctaPrimary: { label: "Request appointment", href: "/contact" },
         ctaSecondary: { label: "Insurance & fees", href: "/insurance-fees" },
+    },
+    "/conditions/schizophrenia": {
+        title: "Schizophrenia",
+        subtitle: "Care focused on stability, safety, and long-term functioning.",
+        bullets: [
+            "Comprehensive evaluation and symptom review",
+            "Medication management and monitoring when appropriate",
+            "Coordination with therapy, family support, and community resources",
+        ],
+        body: [
+            "Schizophrenia is a condition that can affect perception, thinking, and daily functioning. Symptoms may include hallucinations, delusional beliefs, disorganized thinking, reduced motivation, and social withdrawal.",
+            "We focus on careful assessment, medication strategy when appropriate, and ongoing follow-up. We also support care coordination with therapy and family or support systems when helpful, with the goal of improving stability and quality of life over time.",
+        ],
+        ctaPrimary: { label: "Request appointment", href: "/contact" },
+        ctaSecondary: { label: "New patients", href: "/new-patients" },
     },
     "/services/spravato": {
         title: "Spravato® (esketamine) treatment",

@@ -40,7 +40,7 @@ export default function AboutHero() {
                             maxWidth: 520,
                         }}
                     >
-                        WholeCare Health provides evidence-based psychiatric care for adults 18+,
+                        WholeCare Health provides evidence-based psychiatric care,
                         with a focus on clarity, collaboration, and long-term support.
                     </p>
 

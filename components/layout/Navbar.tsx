@@ -101,7 +101,7 @@ export default function Navbar() {
                             WholeCare Health
                         </div>
                         <div style={{ color: "var(--muted)", fontSize: 12 }}>
-                            Psychiatry • Adults 18+
+                            Psychiatry
                         </div>
                     </div>
                 </Link>

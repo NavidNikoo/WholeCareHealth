@@ -67,7 +67,7 @@ export default function ServicesHero() {
                             maxWidth: 680,
                         }}
                     >
-                        Psychiatric care for adults 18+ <br />
+                        Psychiatric care <br />
                         in Orange County
                     </h1>
 

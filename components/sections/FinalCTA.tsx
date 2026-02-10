@@ -6,7 +6,7 @@ export default function FinalCTA() {
                     <div className="col-lg-7">
                         <h2 className="display-6 fw-semibold mb-2">Ready to get started?</h2>
                         <p className="text-muted mb-0">
-                            We offer both telehealth and in person psychiatric care for adults 18+ in Orange County.
+                            We offer both telehealth and in person psychiatric care in Orange County.
                             Tell us what you’re looking for and we’ll respond with clear next steps.
                         </p>
                     </div>
