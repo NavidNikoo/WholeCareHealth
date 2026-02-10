@@ -15,6 +15,9 @@ const bodyFont = Inter({ subsets: ["latin"], variable: "--font-body", display: "
 export const metadata: Metadata = {
     title: "WholeCare Health",
     description: "Modern, compassionate psychiatric care for adults in Orange County.",
+    icons: {
+        icon: "/icon.png",
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
