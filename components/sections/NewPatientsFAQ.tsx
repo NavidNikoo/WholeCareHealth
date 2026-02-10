@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import type { CSSProperties } from "react";
+
 
 type FAQItem = { question: string; answer: string };
 
@@ -22,6 +24,8 @@ const FAQS: FAQItem[] = [
     },
 ];
 
+
+
 export default function NewPatientsFAQ() {
     const [openIndex, setOpenIndex] = useState<number>(0);
 
@@ -29,8 +33,16 @@ export default function NewPatientsFAQ() {
         setOpenIndex((prev) => (prev === idx ? -1 : idx));
     };
 
+    const accordionStyle = {
+        "--bs-accordion-active-bg": "rgba(16,185,129,0.10)",
+        "--bs-accordion-active-color": "#0f172a",
+        "--bs-accordion-btn-focus-box-shadow": "0 0 0 .25rem rgba(16,185,129,0.25)",
+    } as CSSProperties;
+
     // Stable IDs (no useId needed)
     const baseId = "np-faq";
+
+
 
     return (
         <section className="container py-5">
@@ -47,17 +59,7 @@ export default function NewPatientsFAQ() {
                         Quick answers to the most common questions we hear before getting started.
                     </p>
 
-                    <div
-                        className="accordion"
-                        style={{
-                            // @ts-expect-error CSS vars
-                            "--bs-accordion-active-bg": "rgba(16,185,129,0.10)",
-                            // @ts-expect-error CSS vars
-                            "--bs-accordion-active-color": "#0f172a",
-                            // @ts-expect-error CSS vars
-                            "--bs-accordion-btn-focus-box-shadow": "0 0 0 .25rem rgba(16,185,129,0.25)",
-                        }}
-                    >
+                    <div className="accordion" style={accordionStyle}>
                         {FAQS.map((item, idx) => {
                             const isOpen = openIndex === idx;
                             const headerId = `${baseId}-h-${idx}`;

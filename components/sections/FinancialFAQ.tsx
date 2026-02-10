@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import React, { useId, useMemo, useState } from "react";
 
 type FAQItem = {
     question: string;
@@ -33,6 +33,18 @@ export default function FinancialFAQ() {
         setOpenIndex((prev) => (prev === idx ? -1 : idx));
     };
 
+    const accStyle = useMemo(
+        () =>
+            ({
+                "--wc-acc-border": "rgba(15, 23, 42, 0.12)",
+                "--wc-acc-bg": "#ffffff",
+                "--wc-acc-active-bg": "rgba(43, 182, 115, 0.10)",
+                "--wc-acc-focus": "0 0 0 .25rem rgba(43, 182, 115, 0.22)",
+            }) as React.CSSProperties,
+        []
+    );
+
+
     return (
         <section className="container py-5">
             <div className="row g-4">
@@ -43,16 +55,7 @@ export default function FinancialFAQ() {
                     </p>
 
                     {/* WC-themed accordion */}
-                    <div
-                        className="accordion wc-accordion"
-                        // @ts-expect-error CSS vars
-                        style={{
-                            "--wc-acc-border": "rgba(15, 23, 42, 0.12)",
-                            "--wc-acc-bg": "#ffffff",
-                            "--wc-acc-active-bg": "rgba(43, 182, 115, 0.10)", // uses your --accent family
-                            "--wc-acc-focus": "0 0 0 .25rem rgba(43, 182, 115, 0.22)", // matches --focus-ring
-                        }}
-                    >
+                    <div className="accordion wc-accordion" style={accStyle}>
                         {FAQS.map((item, idx) => {
                             const isOpen = openIndex === idx;
                             const headerId = `${sectionId}-faq-h-${idx}`;
