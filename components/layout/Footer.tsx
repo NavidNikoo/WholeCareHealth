@@ -36,8 +36,8 @@ export default function Footer() {
                         <div className="d-flex flex-column gap-2" style={{ fontSize: 14 }}>
                             <div style={{ color: "var(--muted)" }}>
                                 Phone{" "}
-                                <a href="tel:+17147696090" style={contactLinkStyle}>
-                                    (714) 769-6090
+                                <a href="tel:+19496599967" style={contactLinkStyle}>
+                                    (949) 659-9967
                                 </a>
                             </div>
                             <div style={{ color: "var(--muted)" }}>

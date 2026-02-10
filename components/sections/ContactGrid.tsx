@@ -5,7 +5,6 @@ import React, { useState } from "react";
 // components/sections/ContactGrid.tsx
 export default function ContactGrid() {
     const DISPLAY_EMAIL = "info@wholecarehealth.com"; // shown on page
-    const SEND_TO_EMAIL = "info@allpsychgroup.com"; // where submissions go (server-side)
 
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
@@ -46,7 +45,6 @@ export default function ContactGrid() {
                     visitType,
                     message,
                     // optional: helps confirm test routing during dev
-                    debugTo: SEND_TO_EMAIL,
                 }),
             });
 
@@ -196,9 +194,6 @@ export default function ContactGrid() {
                                 )}
                             </div>
 
-                            <div className="text-muted small mt-3">
-                                Test mode: Submissions send to <span className="fw-semibold">{SEND_TO_EMAIL}</span>.
-                            </div>
                         </form>
                     </div>
                 </div>

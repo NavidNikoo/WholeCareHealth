@@ -28,10 +28,10 @@ export default function TopBar() {
                     <span style={{ color: "var(--muted)" }}>
             Call:{" "}
                         <a
-                            href="tel:+17147696090"
+                            href="tel:+19496599967"
                             style={{ color: "var(--text)", fontWeight: 700, textDecoration: "none" }}
                         >
-              (714) 769-6090
+              (949) 659-9967
             </a>
           </span>
                 </div>

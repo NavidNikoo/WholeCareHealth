@@ -35,21 +35,21 @@ export default function PageHero({
                     position: "absolute",
                     inset: 0,
                     background:
-                        "linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65))",
+                        "linear-gradient(90deg, rgba(15,23,42,0.65) 0%, rgba(15,23,42,0.45) 60%, rgba(15,23,42,0.25) 100%)",
                 }}
             />
 
             {/* Content */}
             <div
-                className="wc-container"
+                className="wc-container text-white"
                 style={{
                     position: "relative",
                     zIndex: 1,
                     maxWidth: 700,
-                    color: "#fff",
                 }}
             >
                 <h1
+                    className="text-white"
                     style={{
                         fontSize: "clamp(2.2rem, 5vw, 3.4rem)",
                         fontWeight: 800,
